@@ -1,0 +1,24 @@
+/* Marketing Services Page Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f8f9fa;
+    color: #222;
+    line-height: 1.6;
+}
+.main-service-section {
+    min-height:60vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:row;
+    gap:3rem;
+}
+.main-service-section img {
+    max-width:340px;
+    border-radius:10px;
+    box-shadow:0 4px 16px rgba(40,53,147,0.1);
+}
+@media (max-width: 900px) {
+    .main-service-section { flex-direction: column; text-align: center; }
+    .main-service-section img { margin: 0 auto; }
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - IT Company</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .about-hero {
+            background: url('images/about-banner.jpg') center/cover no-repeat;
+            min-height: 260px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            font-size: 2.8rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .contact-info-boxes {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin: 3rem 0 2rem 0;
+            flex-wrap: wrap;
+        }
+        .contact-box {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(40,53,147,0.08);
+            padding: 2rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 220px;
+            max-width: 320px;
+        }
+        .contact-box i {
+            font-size: 2.2rem;
+            color: #283593;
+            margin-bottom: 1rem;
+        }
+        .contact-box .label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #283593;
+        }
+        .get-in-touch-section {
+            max-width: 600px;
+            margin: 2.5rem auto 3rem auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 24px rgba(40,53,147,0.07);
+            padding: 2.5rem 2rem;
+        }
+        .get-in-touch-section h2 {
+            color: #283593;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 0.7rem;
+            margin-bottom: 1.2rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+        .contact-form button {
+            background: #283593;
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: #3949ab;
+        }
+        @media (max-width: 900px) {
+            .contact-info-boxes { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">ITCompany</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#services" class="dropbtn">Our Services <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-submenu">
+                        <a href="info-eng.html">Information Engineering <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-content right">
+                            <a href="data-science.html">Data Science</a>
+                            <a href="data-engineering.html">Data Engineering</a>
+                            <a href="cloud-engineering.html">Cloud Engineering</a>
+                            <a href="visualizations.html">Visualizations</a>
+                            <a href="talent-acquisition.html">Talent Acquisition</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="it-consult.html">IT Consulting <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-content right">
+                            <a href="business-intelligence-service.html">Business Intelligence Service</a>
+                            <a href="process-automation.html">Process Automation</a>
+                            <a href="software-development.html">Software Development</a>
+                            <a href="machine-learning.html">Machine Learning</a>
+                            <a href="cloud-computing.html">Cloud Computing</a>
+                            <a href="automated-testing-solutions.html">Automated Testing Solutions</a>
+                            <a href="staffing-and-placement.html">Staffing and Placement</a>
+                            <a href="online-training.html">Online Training</a>
+                        </div>
+                    </div>
+                    <div class="dropdown-submenu">
+                        <a href="biz-consult.html">Business Consulting <i class="fa fa-caret-right"></i></a>
+                        <div class="dropdown-content right">
+                            <a href="marketing-services.html">Marketing Services</a>
+                            <a href="sales-consulting.html">Sales Consulting</a>
+                            <a href="it-operations-support.html">IT Operations Support</a>
+                            <a href="lead-generation.html">Lead Generation</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blogs.html">Blogs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="callback-btn">Request Call Back</button>
+    </nav>
+    <section class="about-hero">
+        Contact Us
+    </section>
+    <div class="contact-info-boxes">
+        <div class="contact-box">
+            <i class="fas fa-phone-alt"></i>
+            <div class="label">Phone</div>
+            <div>+1 234 567 890</div>
+        </div>
+        <div class="contact-box">
+            <i class="fas fa-envelope"></i>
+            <div class="label">Email</div>
+            <div>info@itcompany.com</div>
+        </div>
+        <div class="contact-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="label">Address</div>
+            <div>123 Tech Street, City, Country</div>
+        </div>
+    </div>
+    <section class="get-in-touch-section">
+        <h2>Get in Touch</h2>
+        <form class="contact-form">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-links">
+            <div class="quick-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="blogs.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="social-media">
+                <h3>Follow Us</h3>
+                <div class="social-media-icons">
+                    <a href="#" title="Facebook" style="margin-right:10px;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="Twitter" style="margin-right:10px;"><i class="fab fa-twitter"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: info@itcompany.com</p>
+                <p>Phone: +1 234 567 890</p>
+                <p>Address: 123 Tech Street, City, Country</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2025 IT Company. All rights reserved.</div>
+    </footer>
+</body>
+</html>
