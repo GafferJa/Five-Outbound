@@ -1,26 +1,25 @@
-// Slideshow functionality with animation
-let slideIndex = 0;
-const slides = document.getElementsByClassName('slide');
-function showSlides(n) {
-    if (n >= slides.length) slideIndex = 0;
-    if (n < 0) slideIndex = slides.length - 1;
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove('active');
-    }
-    slides[slideIndex].classList.add('active');
-}
-function plusSlides(n) {
-    slideIndex += n;
-    showSlides(slideIndex);
-}
-// Auto slideshow
-setInterval(() => {
-    plusSlides(1);
-}, 5000);
-// Initial display
-showSlides(slideIndex);
+    // Hero background slideshow logic
+    let heroSection = document.querySelector('.hero');
+    let slides = document.querySelectorAll('.hero .slide');
+    let currentSlide = 0;
 
-// --- Service Tabs Dynamic Content ---
+    function showSlide(n) {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+
+        // Change hero background with gradient overlay
+        let bg = slides[currentSlide].getAttribute('data-bg');
+        heroSection.style.backgroundImage = `linear-gradient(rgba(40,53,147,0.5), rgba(40,53,147,0.5)), url('${bg}')`;
+    }
+
+    function plusSlides(n) {
+        showSlide(currentSlide + n);
+    }
+
+    // Initialize
+    showSlide(0);
+    // --- Service Tabs Dynamic Content ---
 document.addEventListener('DOMContentLoaded', function() {
     const serviceData = {
         'info-eng': [

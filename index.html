@@ -58,26 +58,25 @@
         <button class="callback-btn">Request Call Back</button>
     </nav>
     <section class="hero" id="home">
-        <div class="slideshow-container">
-            <div class="slide fade active">
-                <h1>Empowering Your Business with IT Solutions</h1>
-                <p>Innovative, reliable, and tailored IT services for your success.</p>
-                <button class="contact-btn">Contact Us</button>
-            </div>
-            <div class="slide fade">
-                <h1>Transforming Ideas into Reality</h1>
-                <p>Expertise in Information Engineering, IT & Business Consulting.</p>
-                <button class="contact-btn">Contact Us</button>
-            </div>
-            <div class="slide fade">
-                <h1>Your Trusted IT Partner</h1>
-                <p>Delivering excellence through technology and strategy.</p>
-                <button class="contact-btn">Contact Us</button>
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <div class="slide fade active" data-bg="images/hero-slide-1.jpg">
+            <h1>Empowering Your Business with IT Solutions</h1>
+            <p>Innovative, reliable, and tailored IT services for your success.</p>
+            <button class="contact-btn">Contact Us</button>
         </div>
+        <div class="slide fade" data-bg="images/hero-slide-2.jpg">
+            <h1>Transforming Ideas into Reality</h1>
+            <p>Expertise in Information Engineering, IT & Business Consulting.</p>
+            <button class="contact-btn">Contact Us</button>
+        </div>
+        <div class="slide fade" data-bg="images/hero-slide-3.jpg">
+            <h1>Your Trusted IT Partner</h1>
+            <p>Delivering excellence through technology and strategy.</p>
+            <button class="contact-btn">Contact Us</button>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </section>
+
     <section class="about" id="about">
         <div class="about-content">
             <div class="about-text">
@@ -194,6 +193,28 @@
         <div class="footer-bottom">&copy; 2025 IT Company. All rights reserved.</div>
     </footer>
     <script src="js/script.js"></script>
+    <script>
+        // Hero background slideshow logic
+        let heroSection = document.querySelector('.hero');
+        let slides = document.querySelectorAll('.hero .slide');
+        let currentSlide = 0;
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+            // Change hero background
+            let bg = slides[currentSlide].getAttribute('data-bg');
+            heroSection.style.backgroundImage = `linear-gradient(rgba(40,53,147,0.7),rgba(40,53,147,0.7)), url('${bg}')`;
+            heroSection.style.backgroundSize = 'cover';
+            heroSection.style.backgroundPosition = 'center';
+            heroSection.style.transition = 'background-image 0.7s cubic-bezier(0.4,0,0.2,1)';
+        }
+        function plusSlides(n) {
+            showSlide(currentSlide + n);
+        }
+        // Initialize
+        showSlide(0);
+    </script>
 </body>
 
 </html>
