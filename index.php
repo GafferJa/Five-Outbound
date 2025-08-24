@@ -11,9 +11,9 @@
 
 <body>
     <nav class="navbar">
-        <div class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">Five OutBound</a></div>
+        <div class="logo"><a href="index.php" style="color:inherit;text-decoration:none;">Five OutBound</a></div>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li class="dropdown">
                 <a href="#services" class="dropbtn">Our Services <i class="fa fa-caret-down"></i></a>
                 <div class="dropdown-content">
@@ -192,6 +192,13 @@
         </div>
         <div class="footer-bottom">&copy; 2025 IT Company. All rights reserved.</div>
     </footer>
+    <?php if (isset($_GET['success']) && $_GET['success'] == 1): ?>
+        <div
+            style="background: #e6ffed; border: 1px solid #34d399; padding: 15px; margin: 15px 0; border-radius: 8px; text-align:center;">
+            ✅ <strong>Thank you!</strong> Your inquiry has been submitted successfully.
+        </div>
+    <?php endif; ?>
+
     <script src="js/script.js"></script>
     <script>
         // Hero background slideshow logic

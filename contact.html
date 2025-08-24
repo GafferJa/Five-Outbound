@@ -95,9 +95,9 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo"><a href="index.html" style="color:inherit;text-decoration:none;">ITCompany</a></div>
+        <div class="logo"><a href="index.php" style="color:inherit;text-decoration:none;">ITCompany</a></div>
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li class="dropdown">
                 <a href="#services" class="dropbtn">Our Services <i class="fa fa-caret-down"></i></a>
                 <div class="dropdown-content">
@@ -163,25 +163,30 @@
     </div>
     <section class="get-in-touch-section">
         <h2>Get in Touch</h2>
-        <form class="contact-form">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required>
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+       <form class="contact-form" method="POST" action="admin/submit_inquiry.php">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone (Optional)</label>
+    <input type="text" id="phone" name="phone">
+
+    <label for="description">Project Description</label>
+    <textarea id="description" name="description" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+</form>
+
     </section>
     <footer>
         <div class="footer-links">
             <div class="quick-links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="index.php#services">Services</a></li>
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="blogs.html">Blogs</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -204,5 +209,8 @@
         </div>
         <div class="footer-bottom">&copy; 2025 IT Company. All rights reserved.</div>
     </footer>
+    <style src="style/script.js">
+</style>
 </body>
+
 </html>
